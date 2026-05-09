@@ -5,10 +5,6 @@ O módulo `scheduler.py` é o núcleo de tomada de decisão do sistema operacion
 
 Neste projeto, implementamos **exclusivamente a política EDF** (Earliest Deadline First / Prazo Mais Curto Primeiro).
 
-## A simplicidade do EDF e a ausência da variável `sch_pol`
-O PDF do trabalho solicitou a criação de uma variável numérica (`sch_pol = 1`) para selecionar a política. Do ponto de vista de Engenharia de Software Orientada a Objetos, nós transformamos essa "flag" genérica em uma Classe Concreta (`EDFScheduler`). 
-Se no futuro o professor pedisse para implementar *Round Robin*, nós criaríamos a classe `RoundRobinScheduler` e trocaríamos no `main.py`, sem precisar encher o código de `if sch_pol == 1... else if sch_pol == 2...`.
-
 ## Como foi implementado no Python?
 
 A classe possui uma única responsabilidade: Gerenciar a `ready_queue` (Fila de Prontos).
