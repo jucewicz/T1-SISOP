@@ -21,8 +21,8 @@ def load_config(filepath: str):
 
 def main():
     # Se o usuário passar o arquivo JSON por argumento de linha de comando, usamos ele.
-    # Caso contrário, procuramos pelo padrão 'config.json'
-    config_file = sys.argv[1] if len(sys.argv) > 1 else "config.json"
+    # Caso contrário, procuramos pelo padrão 'config1.json'
+    config_file = sys.argv[1] if len(sys.argv) > 1 else "config1.json"
     
     try:
         processes, sim_time = load_config(config_file)
