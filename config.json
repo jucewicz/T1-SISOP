@@ -1,0 +1,19 @@
+{
+  "simulation_time": 20,
+  "tasks": [
+    {
+      "name": "T1",
+      "file": "prog1.asm",
+      "arrival": 0,
+      "ci": 3,
+      "pi": 6
+    },
+    {
+      "name": "T2",
+      "file": "prog2.asm",
+      "arrival": 2,
+      "ci": 2,
+      "pi": 8
+    }
+  ]
+}

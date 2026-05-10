@@ -29,8 +29,3 @@ Como o edital do trabalho pede a modelagem de um sistema de **tarefas periódica
 Esse método atua como o **Reboot da Tarefa**. Ele zera o `pc`, zera o `acc`, puxa um clone das variáveis do arquivo de novo para apagar lixo de memória anterior (`dict(self.init_data)`), renova todo o seu orçamento de processamento (`remaining_ci = ci`) e diz: *"Estou pronto para ir pra fila novamente"* (`State.READY`).
 
 ---
-
-## Como isso se compara ao paradigma do Java ou C?
-
-* **Atributos Públicos:** No Java, é de praxe usarmos modificadores `private` junto com dúzias de métodos getters/setters (`getPc()`, `setAcc(10)`) para forçar o Encapsulamento. Em Python, filosoficamente confia-se no programador. Nós não usamos setters. O `main.py` e o `executor.py` vão acessar o `t1.pc` e `t1.acc` diretamente e alterá-los em tempo de execução de forma limpa. Ela age quase como uma `struct` gigante do C cheia de poderes.
-* **O Método `__repr__`:** Sabe quando você tenta dar um `System.out.println(meuObjeto)` no Java e ele imprime um lixo de memória ilegível (ex: `Process@1a2b3c`) a menos que você sobrescreva o `@Override public String toString()`? O método especial `def __repr__(self):` do Python faz exatamente a mesma coisa, ensinando ao `print()` como aquele objeto deve ser renderizado como texto na tela. Útil para debugar!
